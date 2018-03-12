@@ -31,5 +31,10 @@ namespace Purrfect.Controllers
         {
             return View();
         }
+        
+        public ActionResult PurrfectQuote()
+        {
+            return View();
+        }
     }
 }
