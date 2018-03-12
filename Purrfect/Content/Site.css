@@ -23,6 +23,7 @@ textarea {
     max-width: 280px;
 }
 
+/* Index Homepage*/
 #mainpageimage {
     height: auto;
     left: 0;
@@ -39,6 +40,11 @@ textarea {
 #indexjumbo{
     width: 50%;
     padding-top: 10px;
-    font-family: 'Comic Sans MS', cursive;
-    
+    font-family: 'Comic Sans MS', cursive; 
+    text-align: center;
+}
+
+.purrfecttitle{
+    font-family: cursive;
+    text-align:center;
 }
