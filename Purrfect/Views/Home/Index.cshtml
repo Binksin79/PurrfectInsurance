@@ -6,7 +6,7 @@
     <img id="mainpageimage" src="~/Content/CATPAPER.jpg" border="0" alt="catpic" />
     <h1 class="purrfecttitle">Purrfect Insurance</h1>
     <p class="lead">GET THE PURRFECT QUOTE</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Purrfect Quote Generator &raquo;></a></p>
+    <p><a href="@Url.Action("Forum", "Home")" class="btn btn-primary btn-lg">Purrfect Quote Generator &raquo;></a></p>
 </div>
 
 <div class="row">
@@ -22,7 +22,7 @@
         <h2 class="bottomfiller2">The People's Voice</h2>
         <p class="bottomfiller2">Visit our online forum to see what actual customers have said about their purrfect experience.
            Enage with the community and add your own comments about your experience of the purffect process!</p>
-        <p style="text-align: center"><a class="btn btn-default" id="circlebutton" href="https://go.microsoft.com/fwlink/?LinkId=301866">View Forum &raquo;</a></p>
+        <p style="text-align: center"><a class="btn btn-default" id="circlebutton" href="@Url.Action("Forum", "Home")">View Forum &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2 class="bottomfiller3">Why do I need insurance?</h2>

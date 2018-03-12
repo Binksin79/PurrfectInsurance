@@ -9,6 +9,14 @@ namespace Purrfect.DAL
 {
     public class ForumSqlDAL : IForumDAL
     {
+        private string connectionString;
+
+        public ForumSqlDAL(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
+
+
         public List<Forum> GetAllReviews()
         {
             List<Forum> forumReview = new List<Forum>();

@@ -27,7 +27,7 @@ namespace Purrfect.Controllers
             return View();
         }
 
-        public ActionResult ViewReview()
+        public ActionResult Forum()
         {
             return View();
         }
