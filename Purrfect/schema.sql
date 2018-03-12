@@ -106,3 +106,4 @@ CREATE TABLE [dbo].[Car_Info] (
 	
     CONSTRAINT [PK_dbo.forum] PRIMARY KEY CLUSTERED ([Id] ASC),
 );
+

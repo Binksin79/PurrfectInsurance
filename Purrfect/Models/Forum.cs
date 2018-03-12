@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Purrfect.Models
 {
-    public class ForumModel
+    public class Forum
     {
         
             public int Id { get; set; }
