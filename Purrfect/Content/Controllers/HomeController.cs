@@ -26,5 +26,10 @@ namespace Purrfect.Controllers
 
             return View();
         }
+
+        public ActionResult ViewReview()
+        {
+            return View();
+        }
     }
 }
