@@ -1,4 +1,10 @@
-﻿CREATE DATABASE Project;
+﻿DROP TABLE [dbo].[AspNetUsers]
+DROP TABLE [dbo].[AspNetRoles]
+DROP TABLE [dbo].[AspNetUserRoles]
+DROP TABLE [dbo].[AspNetUserLogins]
+DROP TABLE [dbo].[AspNetUserClaims]
+
+CREATE DATABASE Project;
 
 GO
 
@@ -20,6 +26,12 @@ CREATE TABLE [dbo].[AspNetUsers] (
     [LockoutEnabled]       BIT            NOT NULL,
     [AccessFailedCount]    INT            NOT NULL,
     [UserName]             NVARCHAR (256) NOT NULL,
+	[Rate_Multiplier]	   FLOAT 		  NOT NULL,
+	[ADDRESS]			   NVARCHAR (256) NOT NULL,
+	[DISTRICT]			   NVARCHAR (256) NOT NULL,
+	[NUMBER_INSURED]	   INT			  NOT NULL,
+	[NUMBER_CLAIMS]		   INT			  NOT NULL,
+
     CONSTRAINT [PK_dbo.AspNetUsers] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
@@ -72,3 +84,14 @@ CREATE NONCLUSTERED INDEX [IX_UserId]
 CREATE NONCLUSTERED INDEX [IX_RoleId]
     ON [dbo].[AspNetUserRoles]([RoleId] ASC);
 
+CREATE TABLE [dbo].[Car_Info] (
+    [Car_Id]   NVARCHAR (128) NOT NULL,
+    [UserId]  NVARCHAR (256) NOT NULL,
+	[Claim]    NVARCHAR  (256) NULL,
+	[Make]	   NVARCHAR  (256) NOT NULL,
+	[Model]    NVARCHAR  (256) NOT NULL,
+	[Mileage]  INT			   NOT NULL,
+	[Year]     INT             NOT NULL,
+    CONSTRAINT [PK_dbo.Car_Info] PRIMARY KEY CLUSTERED ([Car_Id] ASC),
+	CONSTRAINT [FK_dbo.Car_Info_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE
+);
