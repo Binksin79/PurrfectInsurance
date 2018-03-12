@@ -94,4 +94,16 @@ CREATE TABLE [dbo].[Car_Info] (
 	[Year]     INT             NOT NULL,
     CONSTRAINT [PK_dbo.Car_Info] PRIMARY KEY CLUSTERED ([Car_Id] ASC),
 	CONSTRAINT [FK_dbo.Car_Info_dbo.AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE
+	);
+
+	CREATE TABLE [dbo].[forum] (
+    [Id]   NVARCHAR (128) NOT NULL,
+    [Username]  NVARCHAR (256) NOT NULL,
+	[Rating]    int				 NULL,
+	[Title]	   NVARCHAR  (256) NOT NULL,
+	[Message]  NVARCHAR  (256) NOT NULL,
+	[ReviewDate] datetime	   NOT NULL,
+	
+    CONSTRAINT [PK_dbo.forum] PRIMARY KEY CLUSTERED ([Id] ASC),
 );
+
