@@ -111,16 +111,22 @@ textarea {
 div.container.body-content {
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
 }
 
 
 div.AboutCheshire {
     float: left;
+   
+    height: 800px;
 }
 
 .contactcontainer{
     text-align: right;
-    height: 500px;
+    height:800px;
+    width: 100%;
+    
+    
 }
 
 .aboutpagecontainer{
