@@ -85,6 +85,7 @@ textarea {
     opacity: .75;
 }
 
+/* About Page*/
 #aboutpageimage {
     height: auto;
     left: 0;
@@ -101,4 +102,15 @@ textarea {
 .contactcontainer{
     text-align: right;
     height: 500px;
+}
+
+.aboutpagecontainer{
+    width: 30%;
+    font-family: cursive;
+    color:burlywood;
+
+}
+
+.abouth2{
+    text-align:center;
 }
