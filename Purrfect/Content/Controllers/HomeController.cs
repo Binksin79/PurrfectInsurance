@@ -58,5 +58,11 @@ namespace Purrfect.Controllers
             dal.SaveReview(review);
             return RedirectToAction("Forum");
         }
+
+        public ActionResult QuoteMe(QuoteGeneratorModel model)
+        {
+            return View("QuoteMe", model);
+        }
+
     }
 }

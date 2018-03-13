@@ -1,7 +1,43 @@
-﻿
+﻿@model Purrfect.Models.QuoteGeneratorModel
 @{
     ViewBag.Title = "PurrfectQuote";
 }
 
 <h2>PurrfectQuote</h2>
 
+<form method="get" action="@Url.Action("QuoteMe", "Home")">
+    <select name="FavoriteAnimal">
+        <option value="0">Cat</option>
+        <option value="2">Dog</option>
+        <option value="1">Bird</option>
+        <option value=".5">Chinchilla</option>
+        <option value=".5">Fish</option>
+    </select>
+    @Html.TextBoxFor(m => m.NumberOfCars, new { plaholder = "How many cars do you own?", type = "number" })
+    @Html.TextBoxFor(m => m.NumberOfAccidents, new { plaholder = "How many accidents have you had?", type = "number" })
+    <select name="FavoriteBand">
+        <option value="0">Foo Fighters</option>
+        <option value="NickelBack">2</option>
+        <option value="The Beatles">1</option>
+        <option value="Wu Tang">0</option>
+        <option value="Zac Brown Band">1.5</option>
+    </select>
+    <select name="FavoritePizzaTop">
+        <option value="0">Pepperoni</option>
+        <option value=".5">Mushroom</option>
+        <option value=".5">Sausage</option>
+        <option value="2">Pineapple</option>
+        <option value="1">I don't like pizza</option>
+    </select>
+
+
+
+    <button>GO GO GO></button>
+
+
+
+
+
+
+
+</form>
