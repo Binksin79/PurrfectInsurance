@@ -3,66 +3,59 @@
     ViewBag.Title = "PurrfectQuote";
 }
 
-<h2>PurrfectQuote</h2>
+<h2 class="purrh2">PurrfectQuote</h2>
 
 <form method="get" action="@Url.Action("QuoteMe", "Home")">
-    <div>
-        <p>What is your favorite animal?</p>
-        <select name="FavoriteAnimal">
-            <option value="0">Cat</option>
-            <option value="2">Dog</option>
-            <option value="1">Bird</option>
-            <option value=".5">Chinchilla</option>
-            <option value=".5">Fish</option>
-        </select>
+    <div class="purrfectquotecontainer">
+        <div>
+            <p>What is your favorite animal?</p>
+            <select name="FavoriteAnimal">
+                <option value="0">Cat</option>
+                <option value="2">Dog</option>
+                <option value="1">Bird</option>
+                <option value=".5">Chinchilla</option>
+                <option value=".5">Fish</option>
+            </select>
+        </div>
+        <div>
+            <p>How many cars do you own?</p>
+            <select name="NumberOfCars">
+                <option value="0">1</option>
+                <option value=".5">2</option>
+                <option value="1">3</option>
+                <option value="1.5">4</option>
+                <option value="2">5+</option>
+            </select>
+        </div>
+        <div>
+            <p>Have you had an accident in the last 5 years?</p>
+            <select name="NumberOfAccidents">
+                <option value="0">No</option>
+                <option value="2">Yes, I was not at fault</option>
+                <option value="4">Yes, I was at fault</option>
+            </select>
+
+        </div>
+        <div>
+            <p>What is your favorite band?</p>
+            <select name="FavoriteBand">
+                <option value="0">Foo Fighters</option>
+                <option value="2">NickelBack</option>
+                <option value="1">The Beatles</option>
+                <option value="0">Wu Tang</option>
+                <option value="1.5">Zach Brown Band</option>
+            </select>
+        </div>
+        <div>
+            <p>What is your favorite pizza topping?</p>
+            <select name="FavoritePizzaTop">
+                <option value="0">Pepperoni</option>
+                <option value=".5">Mushroom</option>
+                <option value=".5">Sausage</option>
+                <option value="2">Pineapple</option>
+                <option value="1">I don't like pizza</option>
+            </select>
+        </div>
+        <button>Quote Me></button>
     </div>
-    <div>
-        <p>How many cars do you own?</p>
-        <select name="NumberOfCars">
-            <option value="0">1</option>
-            <option value=".5">2</option>
-            <option value="1">3</option>
-            <option value="1.5">4</option>
-            <option value="2">5+</option>
-        </select>
-    </div>
-    <div>
-        <p>Have you had an accident in the last 5 years?</p>
-        <select name="NumberOfAccidents">
-            <option value="0">No</option>
-            <option value="2">Yes, I was not at fault</option>
-            <option value="4">Yes, I was at fault</option>
-        </select>
-        
-    </div>
-    <div>
-        <p>What is your favorite band?</p>
-        <select name="FavoriteBand">
-            <option value="0">Foo Fighters</option>
-            <option value="2">NickelBack</option>
-            <option value="1">The Beatles</option>
-            <option value="0">Wu Tang</option>
-            <option value="1.5">Zach Brown Band</option>
-        </select>
-    </div>
-    <div>
-        <p>What is your favorite pizza topping?</p>
-        <select name="FavoritePizzaTop">
-            <option value="0">Pepperoni</option>
-            <option value=".5">Mushroom</option>
-            <option value=".5">Sausage</option>
-            <option value="2">Pineapple</option>
-            <option value="1">I don't like pizza</option>
-        </select>
-    </div>
-
-
-    <button>Quote Me></button>
-
-
-
-
-
-
-
 </form>
