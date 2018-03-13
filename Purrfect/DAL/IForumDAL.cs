@@ -6,12 +6,11 @@ using Purrfect.Models;
 
 namespace Purrfect.DAL
 {
-    public class IForumDAL
+    public interface IForumDAL
     {
-        public interface IReviewDAL
-        {
+        
             List<Forum> GetAllReviews();
             bool SaveReview(Forum newReview);
-        }
+        
     }
 }

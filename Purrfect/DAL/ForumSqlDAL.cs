@@ -9,12 +9,9 @@ namespace Purrfect.DAL
 {
     public class ForumSqlDAL : IForumDAL
     {
-        private string connectionString;
+        private string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
-        public ForumSqlDAL(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
+
 
 
         public List<Forum> GetAllReviews()
@@ -26,7 +23,7 @@ namespace Purrfect.DAL
                 conn.Open();
 
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM forum ORDER BY reviewDate DESC", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM forum ORDER BY ReviewDate DESC", conn);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -34,16 +31,36 @@ namespace Purrfect.DAL
                 {
                     Forum f = new Forum();
                     
-                    f.Username = Convert.ToString(reader["username"]);
-                    f.Rating = Convert.ToInt32(reader["rating"]);
+                    f.Username = Convert.ToString(reader["Username"]);
+                    f.Rating = Convert.ToInt32(reader["Rating"]);
                     f.Title = Convert.ToString(reader["Title"]);
                     f.Message = Convert.ToString(reader["Message"]);
-                    f.ReviewDate = Convert.ToDateTime(reader["reviewDate"]);
+                    f.ReviewDate = Convert.ToDateTime(reader["ReviewDate"]);
 
                     forumReview.Add(f);
                 }
             }
             return forumReview;
         }
+        public bool SaveReview(Forum newReview)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO reviews VALUES(@username, @rating, @title, @message, @postdate)", conn);
+
+                cmd.Parameters.AddWithValue("@username", newReview.Username);
+                cmd.Parameters.AddWithValue("@rating", newReview.Rating);
+                cmd.Parameters.AddWithValue("@title", newReview.Title);
+                cmd.Parameters.AddWithValue("@message", newReview.Message);
+                cmd.Parameters.AddWithValue("@postdate", DateTime.Now);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            return true;
+        }
     }
+    
 }

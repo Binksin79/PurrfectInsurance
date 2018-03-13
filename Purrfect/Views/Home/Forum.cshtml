@@ -1,7 +1,22 @@
-﻿
+﻿@model List<Purrfect.Models.Forum>
 @{
     ViewBag.Title = "Forum";
 }
 
-<h2>Forum</h2>
+<h1>Forum</h1>
+
+<div class="forumPage">
+    <div class="forumInfo">
+
+        @foreach (var item in Model)
+        {
+        <p>@item.Title @for(int i = 0; i< item.Rating; i++){<img src="~/Content/star.png"/>}</p>
+        <p>By @item.Username on @(item.ReviewDate)</p>
+        <p></p>
+        <p>@item.Message</p>
+        }
+
+    </div>
+    @*<button href="@Url.Action("></button>*@
+</div>
 

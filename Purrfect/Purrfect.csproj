@@ -224,6 +224,7 @@
     <Content Include="Content\Cat-Contact-Phone.jpg" />
     <Content Include="Content\CATPAPER.jpg" />
     <Content Include="Content\ScholarKitty.jpg" />
+    <Content Include="Content\star.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

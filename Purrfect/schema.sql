@@ -1,8 +1,10 @@
-﻿DROP TABLE [dbo].[AspNetUsers]
-DROP TABLE [dbo].[AspNetRoles]
-DROP TABLE [dbo].[AspNetUserRoles]
-DROP TABLE [dbo].[AspNetUserLogins]
+﻿DROP TABLE [dbo].[forum]
 DROP TABLE [dbo].[AspNetUserClaims]
+DROP TABLE [dbo].[AspNetUserLogins]
+DROP TABLE [dbo].[AspNetUserRoles]
+DROP TABLE [dbo].[AspNetRoles]
+DROP TABLE [dbo].[AspNetUsers]
+
 
 CREATE DATABASE Project;
 
@@ -97,13 +99,16 @@ CREATE TABLE [dbo].[Car_Info] (
 	);
 
 	CREATE TABLE [dbo].[forum] (
-    [Id]   NVARCHAR (128) NOT NULL,
+    [Id]   int identity(1,1),
     [Username]  NVARCHAR (256) NOT NULL,
 	[Rating]    int				 NULL,
 	[Title]	   NVARCHAR  (256) NOT NULL,
 	[Message]  NVARCHAR  (256) NOT NULL,
-	[ReviewDate] datetime	   NOT NULL,
+	[ReviewDate] datetime	  default getdate(),
 	
     CONSTRAINT [PK_dbo.forum] PRIMARY KEY CLUSTERED ([Id] ASC),
 );
 
+insert into forum values('hpotter', 5, 'I love the cats on this site!', 'I was worried at first but this site drew me in and now I am a happy customer!', getdate());
+insert into forum values('shaneo', 3, 'Why did it have to be cats?!', 'Great company but I hate cats! How about a cute goldfish?',getdate());
+insert into forum values('kathys', 4, 'Scary cat!', 'When I saw the purple cat, I jumped!', getdate());

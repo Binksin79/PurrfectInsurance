@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Purrfect.DAL;
 
 namespace Purrfect
 {
@@ -30,7 +31,7 @@ namespace Purrfect
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
             // Configure Bindings
-            // kernel.Bind<interface>().To<class>();
+           kernel.Bind<IForumDAL>().To<ForumSqlDAL>();
 
             return kernel;
         }
