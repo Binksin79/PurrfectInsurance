@@ -88,7 +88,7 @@ CREATE NONCLUSTERED INDEX [IX_RoleId]
 
 CREATE TABLE [dbo].[Car_Info] (
     [Car_Id]   NVARCHAR (128) NOT NULL,
-    [UserId]  NVARCHAR (256) NOT NULL,
+    [UserId]  NVARCHAR (128) NOT NULL,
 	[Claim]    NVARCHAR  (256) NULL,
 	[Make]	   NVARCHAR  (256) NOT NULL,
 	[Model]    NVARCHAR  (256) NOT NULL,
