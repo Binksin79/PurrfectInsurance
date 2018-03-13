@@ -48,7 +48,7 @@ namespace Purrfect.DAL
             {
                 conn.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO reviews VALUES(@username, @rating, @title, @message, @postdate)", conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Forum VALUES(@username, @rating, @title, @message, @postdate)", conn);
 
                 cmd.Parameters.AddWithValue("@username", newReview.Username);
                 cmd.Parameters.AddWithValue("@rating", newReview.Rating);

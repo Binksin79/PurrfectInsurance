@@ -1,0 +1,27 @@
+﻿@model Purrfect.Models.Forum
+@{
+    ViewBag.Title = "NewReview";
+}
+
+<h2>Create a review!</h2>
+
+<form method="post" action="@Url.Action("newReview", "Home")">
+
+    <div class="form-group">
+        @Html.TextBoxFor(u => u.Username, new { placeholder = "Enter Username", type = "text" })
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(u => u.Rating, new { placeholder = "Enter Rating", type = "number" })
+    </div>
+    <div class="form-group">
+        @Html.TextBoxFor(u => u.Title, new { placeholder = "Enter Title", type = "text" })
+    </div>
+    <div class="form-group">
+        @Html.TextAreaFor(u => u.Message, new { placeholder = "Enter Message", type = "text" })
+    </div>
+
+    <button>GO!</button>
+
+</form>
+

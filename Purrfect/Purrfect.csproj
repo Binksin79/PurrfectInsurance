@@ -286,6 +286,7 @@
     <Content Include="Views\ViewReview.cshtml" />
     <Content Include="Views\Home\Forum.cshtml" />
     <Content Include="Views\Home\PurrfectQuote.cshtml" />
+    <Content Include="Views\Home\NewReview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -52,5 +52,11 @@ namespace Purrfect.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult NewReview(Forum review)
+        {
+            dal.SaveReview(review);
+            return RedirectToAction("Forum");
+        }
     }
 }
