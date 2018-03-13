@@ -39,6 +39,7 @@ textarea {
 
 #indexjumbo{
     width: 50%;
+    
     padding-top: 10px;
     font-family: 'Comic Sans MS', cursive; 
     text-align: center;
@@ -46,6 +47,14 @@ textarea {
     background-color: rgba(154, 88, 88, 0.00)
 }
 
+#rowidindex{
+    margin-top: 25%;
+    margin-bottom: 1%;
+
+}
+
+
+}
 .purrfecttitle{
     font-family: cursive;
     text-align:center;
@@ -97,6 +106,16 @@ textarea {
     top: 0;
     width: 100%;
     z-index: -1;
+}
+
+div.container.body-content {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+div.AboutCheshire {
+    float: left;
 }
 
 .contactcontainer{
