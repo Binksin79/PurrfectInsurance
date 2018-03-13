@@ -224,6 +224,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Cat-Contact-Phone.jpg" />
     <Content Include="Content\CATPAPER.jpg" />
+    <Content Include="Content\forumcat.png" />
     <Content Include="Content\PURRRRR.png" />
     <Content Include="Content\QuoteMePurr.png" />
     <Content Include="Content\ScholarKitty.jpg" />
