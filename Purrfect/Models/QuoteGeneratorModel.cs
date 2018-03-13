@@ -19,7 +19,7 @@ namespace Purrfect.Models
             string quote = "";
             double result = FavoriteAnimal + NumberOfCars + NumberOfAccidents + FavoriteBand + FavoritePizzaTop;
 
-            if(result > 0 && result <= 4)
+            if(result >= 0 && result <= 4)
             {
                 quote = "Your purrfect rate is $100 a month";
             }
